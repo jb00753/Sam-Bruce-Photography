@@ -1,0 +1,303 @@
+/* styles_photography.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+header {
+    
+	background-color: rgba(229, 221, 197, 0.9);
+    color: #634832;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+	position: fixed; /* Make the header fixed */
+    top: 0; /* Position it at the top */
+    width:100%; /* Make it span the full width of the viewport */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Briem Hand', cursive;
+    margin: 0;
+    margin-left: 50px;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color: #FFFF;
+}
+
+nav {
+    margin-top: 10px;
+    margin-left: 50px; /* Align the nav with the h1 */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #634832;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+	margin-right: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    color: #634832;
+}
+
+main {
+    padding: 20px;
+}
+main.hero h2,
+main.hero p {
+    font-size: 2.5em; /* Larger font size for h2 */
+    text-align: center;
+    color: #FFFF; /* Color change if needed */
+}
+
+main.hero p {
+    font-size: 1.3em; /* Larger font size for p */
+}
+.photo-group {
+    margin-bottom: 50px;
+}
+
+.photo-group h2 {
+    text-align: center;
+    color: #fffff; /* New color */
+    font-size: 2em; /* New font size */
+}
+
+/* Container for the photos */
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit columns with a minimum width of 250px */
+    gap: 30px; /* Adjust the gap between photos */
+    justify-items: center; /* Center the grid items horizontally */
+    width: 100%;
+}
+
+/* Styling for the images */
+.photo-container img {
+    width: 100%; /* Set the width to 100% of the grid cell */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for the images */
+.photo-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Specific styles for large images */
+.photo-container img.large {
+    max-width: 150%; /* Increase max-width to 150% of the grid cell */
+    max-height: 150%; /* Optionally control the max height */
+}
+
+/* Specific styles for small images */
+.photo-container img.small {
+    width: 100%; /* Smaller width for the image */
+    height: 110%;
+	
+}
+
+/*Adjusting the padding ONLY on portfolio page */
+.portfolio-page {
+    padding-top: 100px; /* Adjust this value as needed */
+}
+
+
+
+/* Hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 250px 0;
+    background-image: url('camera picture 1 (Sams website).jpg');
+    background-size: cover;
+    background-position: center; /* Center the background image */
+    color: #fff;
+}
+
+<!--Practicing comments here -->
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and transparency as needed */
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero h2,
+.hero p {
+    color: #fffff;  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adjust the shadow as needed */
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn:hover {
+    background-color: #634832; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+	padding-top: 100px;
+}
+
+.about-image img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    color: #634832;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.6;
+}
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+.contact-section h2 {
+    color: #634832;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #634832;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #634832;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.contact-links {
+    margin-top: 20px;
+}
+
+.contact-links h3 {
+    color: #634832;
+    margin-bottom: 10px;
+}
+
+.contact-links p {
+    margin: 5px 0;
+}
+
+.contact-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    color: #634832;
+}
+footer {
+    background-color: #E5DDC5;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border: none;
+    font-size: 12px;
+    position: relative;
+}
