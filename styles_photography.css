@@ -118,6 +118,7 @@ main.hero p {
 /* Styling for the images */
 .photo-container img {
     width: 100%; /* Set the width to 100% of the grid cell */
+    max-width: 300px; /* Ensure the images do not exceed 300px */
     height: auto; /* Maintain aspect ratio */
     border: 2px solid #fff;
     border-radius: 5px;
@@ -131,15 +132,41 @@ main.hero p {
 
 /* Specific styles for large images */
 .photo-container img.large {
-    max-width: 150%; /* Increase max-width to 150% of the grid cell */
-    max-height: 150%; /* Optionally control the max height */
+    max-width: 450px; /* Set a fixed maximum width */
+    max-height: 450px; /* Optionally control the max height */
 }
 
 /* Specific styles for small images */
 .photo-container img.small {
     width: 100%; /* Smaller width for the image */
-    height: 110%;
-	
+    max-width: 200px; /* Ensure the smaller images do not exceed 200px */
+    height: auto;
+}
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+    .photo-container img {
+        max-width: 400px; /* Increase max width for larger screens */
+    }
+    .photo-container img.large {
+        max-width: 500px;
+    }
+    .photo-container img.small {
+        max-width: 250px; /* Adjust small images */
+    }
+}
+
+/* Media query for extra large screens */
+@media (min-width: 900px) {
+    .photo-container img {
+        max-width: 500px; /* Further increase max width for extra large screens */
+    }
+    .photo-container img.large {
+        max-width: 600px;
+    }
+    .photo-container img.small {
+        max-width: 300px; /* Adjust small images */
+    }
 }
 
 /*Adjusting the padding ONLY on portfolio page */
@@ -300,4 +327,6 @@ footer {
     border: none;
     font-size: 12px;
     position: relative;
+    bottom: 0;
+    width: 100%;
 }
