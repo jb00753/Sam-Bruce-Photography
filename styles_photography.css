@@ -333,5 +333,5 @@ footer {
     border: none;
     font-size: 12px;
     width: 100%;
-    flex-shrink: 0; /* Ensures the footer does not shrink *
+    flex-shrink: 0; /* Ensures the footer does not shrink */
 }
