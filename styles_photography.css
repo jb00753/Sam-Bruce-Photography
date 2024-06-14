@@ -5,20 +5,28 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Ensure the main content takes up remaining space */
+.content {
+    flex: 1;
+}
+
+/* Header styles */
 header {
-    
-	background-color: rgba(229, 221, 197, 0.9);
+    background-color: rgba(229, 221, 197, 0.9);
     color: #634832;
     padding: 8px 15px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-	position: fixed; /* Make the header fixed */
-    top: 0; /* Position it at the top */
-    width:100%; /* Make it span the full width of the viewport */
-    z-index: 1000; /* Ensure it is above other content */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .header-content {
@@ -43,7 +51,7 @@ h1 a:hover {
 
 nav {
     margin-top: 10px;
-    margin-left: 50px; /* Align the nav with the h1 */
+    margin-left: 50px;
 }
 
 nav ul {
@@ -70,7 +78,7 @@ nav ul li a:hover {
 .social-media {
     display: flex;
     gap: 10px;
-	margin-right: 20px;
+    margin-right: 20px;
 }
 
 .social-icon {
@@ -83,98 +91,93 @@ nav ul li a:hover {
     color: #634832;
 }
 
+/* Main content styles */
 main {
     padding: 20px;
+    margin-top: 70px; /* Adjust this if the header height changes */
 }
+
 main.hero h2,
 main.hero p {
-    font-size: 2.5em; /* Larger font size for h2 */
+    font-size: 2.5em;
     text-align: center;
-    color: #FFFF; /* Color change if needed */
+    color: #FFFF;
 }
 
 main.hero p {
-    font-size: 1.3em; /* Larger font size for p */
+    font-size: 1.3em;
 }
+
 .photo-group {
     margin-bottom: 50px;
 }
 
 .photo-group h2 {
     text-align: center;
-    color: #fffff; /* New color */
-    font-size: 2em; /* New font size */
+    color: #fffff;
+    font-size: 2em;
 }
 
-/* Container for the photos */
 .photo-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit columns with a minimum width of 250px */
-    gap: 30px; /* Adjust the gap between photos */
-    justify-items: center; /* Center the grid items horizontally */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
     width: 100%;
 }
 
-/* Styling for the images */
 .photo-container img {
-    width: 100%; /* Set the width to 100% of the grid cell */
-    max-width: 300px; /* Ensure the images do not exceed 300px */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border: 2px solid #fff;
     border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
-/* Hover effect for the images */
 .photo-container img:hover {
     transform: scale(1.05);
 }
 
-/* Specific styles for large images */
 .photo-container img.large {
-    max-width: 450px; /* Set a fixed maximum width */
-    max-height: 450px; /* Optionally control the max height */
+    max-width: 450px;
+    max-height: 450px;
 }
 
-/* Specific styles for small images */
 .photo-container img.small {
-    width: 100%; /* Smaller width for the image */
-    max-width: 200px; /* Ensure the smaller images do not exceed 200px */
+    width: 100%;
+    max-width: 200px;
     height: auto;
 }
 
-/* Media query for larger screens */
 @media (min-width: 600px) {
     .photo-container img {
-        max-width: 400px; /* Increase max width for larger screens */
+        max-width: 400px;
     }
     .photo-container img.large {
         max-width: 500px;
     }
     .photo-container img.small {
-        max-width: 250px; /* Adjust small images */
+        max-width: 250px;
     }
 }
 
-/* Media query for extra large screens */
 @media (min-width: 900px) {
     .photo-container img {
-        max-width: 500px; /* Further increase max width for extra large screens */
+        max-width: 500px;
     }
     .photo-container img.large {
         max-width: 600px;
     }
     .photo-container img.small {
-        max-width: 300px; /* Adjust small images */
+        max-width: 300px;
     }
 }
 
-/*Adjusting the padding ONLY on portfolio page */
+/* Adjusting the padding ONLY on portfolio page */
 .portfolio-page {
-    padding-top: 100px; /* Adjust this value as needed */
+    padding-top: 100px;
 }
-
-
 
 /* Hero section */
 .hero {
@@ -183,16 +186,14 @@ main.hero p {
     padding: 250px 0;
     background-image: url('camera picture 1 (Sams website).jpg');
     background-size: cover;
-    background-position: center; /* Center the background image */
+    background-position: center;
     color: #fff;
 }
-
-<!--Practicing comments here -->
 
 .hero-content {
     position: relative;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and transparency as needed */
+    background-color: rgba(0, 0, 0, 0.5);
     display: inline-block;
     padding: 20px;
     border-radius: 5px;
@@ -200,8 +201,8 @@ main.hero p {
 
 .hero h2,
 .hero p {
-    color: #fffff;  
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Adjust the shadow as needed */
+    color: #fffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .btn {
@@ -216,11 +217,11 @@ main.hero p {
 }
 
 .btn:hover {
-    background-color: #634832; /* Change background color on hover */
-    color: #fff; /* Change text color on hover */
+    background-color: #634832;
+    color: #fff;
 }
 
-
+/* About section */
 .about-section {
     display: flex;
     align-items: center;
@@ -228,7 +229,7 @@ main.hero p {
     flex-wrap: wrap;
     gap: 20px;
     padding: 40px;
-	padding-top: 100px;
+    padding-top: 100px;
 }
 
 .about-image img {
@@ -249,6 +250,8 @@ main.hero p {
 .about-text p {
     line-height: 1.6;
 }
+
+/* Contact section */
 .contact-section {
     max-width: 600px;
     margin: 0 auto;
@@ -275,7 +278,8 @@ main.hero p {
     text-align: left;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     padding: 10px;
     border: 1px solid #634832;
     border-radius: 5px;
@@ -313,12 +317,14 @@ main.hero p {
 
 .contact-links a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .contact-links a:hover {
     color: #634832;
 }
+
+/* Footer styles */
 footer {
     background-color: #E5DDC5;
     color: #fff;
@@ -326,7 +332,6 @@ footer {
     padding: 5px 10px;
     border: none;
     font-size: 12px;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    flex-shrink: 0; /* Ensures the footer does not shrink *
 }
