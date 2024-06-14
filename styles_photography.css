@@ -147,7 +147,7 @@ main.hero p {
 .photo-container img.small {
     width: 100%;
     max-width: 200px;
-    height: auto;
+    height: 250px;
 }
 
 @media (min-width: 600px) {
