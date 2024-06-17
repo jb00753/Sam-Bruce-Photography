@@ -1,0 +1,341 @@
+/* styles_photography.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Ensure the main content takes up remaining space */
+.content {
+    flex: 1;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(229, 221, 197, 0.9);
+    color: #634832;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Briem Hand', cursive;
+    margin: 0;
+    margin-left: 50px;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 a:hover {
+    color: #FFFF;
+}
+
+nav {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #634832;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-icon:hover {
+    color: #634832;
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    margin-top: 70px; /* Adjust this if the header height changes */
+}
+
+main.hero h2,
+main.hero p {
+    font-size: 2.5em;
+    text-align: center;
+    color: #FFFF;
+}
+
+main.hero p {
+    font-size: 1.3em;
+}
+
+.photo-group {
+    margin-bottom: 50px;
+}
+
+.photo-group h2 {
+    text-align: center;
+    color: #fffff;
+    font-size: 2em;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    width: 100%;
+}
+
+.photo-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.photo-container img:hover {
+    transform: scale(1.05);
+}
+
+.photo-container img.large {
+    max-width: 450px;
+    max-height: 450px;
+}
+
+.photo-container img.small {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+@media (min-width: 600px) {
+    .photo-container img {
+        max-width: 400px;
+    }
+    .photo-container img.large {
+        max-width: 500px;
+    }
+    .photo-container img.small {
+        max-width: 250px;
+    }
+}
+
+@media (min-width: 900px) {
+    .photo-container img {
+        max-width: 500px;
+    }
+    .photo-container img.large {
+        max-width: 600px;
+    }
+    .photo-container img.small {
+        max-width: 300px;
+    }
+}
+/* Media query for larger screens */
+@media (min-width: 1200px) { /* Adjust the breakpoint as needed */
+    .photo-container {
+        grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+    }
+/* Adjusting the padding ONLY on portfolio page */
+.portfolio-page {
+    padding-top: 100px;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 250px 0;
+    background-image: url('camera picture 1 (Sams website).jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.hero h2,
+.hero p {
+    color: #fffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn:hover {
+    background-color: #634832;
+    color: #fff;
+}
+
+/* About section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    padding-top: 100px;
+}
+
+.about-image img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    color: #634832;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.6;
+}
+
+/* Contact section */
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+.contact-section h2 {
+    color: #634832;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #634832;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #634832;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.contact-links {
+    margin-top: 20px;
+}
+
+.contact-links h3 {
+    color: #634832;
+    margin-bottom: 10px;
+}
+
+.contact-links p {
+    margin: 5px 0;
+}
+
+.contact-links a {
+    color: #fff;
+    text-decoration: none; 
+}
+
+.contact-links a:hover {
+    color: #634832;
+}
+
+/* Footer styles */
+footer {
+    background-color: #E5DDC5;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border: none;
+    font-size: 12px;
+    width: 100%;
+    flex-shrink: 0; /* Ensures the footer does not shrink */
+}
