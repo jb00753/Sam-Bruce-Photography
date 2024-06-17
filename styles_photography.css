@@ -1,18 +1,24 @@
-/* styles_photography.css */
-body {
-    font-family: Arial, sans-serif;
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
     margin: 0;
-    padding: 0;
-    background-color: #000;
-    color: #fff;
     display: flex;
     flex-direction: column;
+}
+
+/* Body should be a flex container */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
     min-height: 100vh;
 }
 
-/* Ensure the main content takes up remaining space */
+/* Main content should take up remaining space */
 .content {
     flex: 1;
+    padding: 20px;
+    margin-top: 70px; /* Adjust this if the header height changes */
 }
 
 /* Header styles */
@@ -92,11 +98,6 @@ nav ul li a:hover {
 }
 
 /* Main content styles */
-main {
-    padding: 20px;
-    margin-top: 70px; /* Adjust this if the header height changes */
-}
-
 main.hero h2,
 main.hero p {
     font-size: 2.5em;
@@ -114,7 +115,7 @@ main.hero p {
 
 .photo-group h2 {
     text-align: center;
-    color: #fffff;
+    color: #fff;
     font-size: 2em;
 }
 
@@ -173,11 +174,14 @@ main.hero p {
         max-width: 300px;
     }
 }
+
 /* Media query for larger screens */
-@media (min-width: 1200px) { /* Adjust the breakpoint as needed */
+@media (min-width: 1200px) {
     .photo-container {
-        grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
+        grid-template-columns: repeat(5, 1fr);
     }
+}
+
 /* Adjusting the padding ONLY on portfolio page */
 .portfolio-page {
     padding-top: 100px;
@@ -205,7 +209,7 @@ main.hero p {
 
 .hero h2,
 .hero p {
-    color: #fffff;
+    color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
@@ -321,7 +325,7 @@ main.hero p {
 
 .contact-links a {
     color: #fff;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 .contact-links a:hover {
