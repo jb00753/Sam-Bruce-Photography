@@ -160,7 +160,7 @@ main.hero p {
 }
 @media (min-width: 600px) {
      .portfolio-page {
-        padding-top: 250px; /* Adjust padding-top for medium screens */
+        padding-top: 200px; /* Adjust padding-top for medium screens */
     }
 
     .photo-container img {
@@ -173,8 +173,8 @@ main.hero p {
 
     .photo-container img.small {
         max-width: 250px;
+    }
 }
-
 @media (min-width: 900px) {
     .photo-container img {
         max-width: 500px;
