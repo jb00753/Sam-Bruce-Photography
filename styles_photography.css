@@ -170,7 +170,7 @@ main.hero p {
     }
 
     .portfolio-page {
-        padding-top: 150px; /* Adjust padding-top for smaller screens */
+        padding-top: 250px; /* Adjust padding-top for smaller screens */
     }
 }
 @media (min-width: 600px) {
