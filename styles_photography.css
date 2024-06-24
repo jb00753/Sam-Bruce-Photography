@@ -159,18 +159,20 @@ main.hero p {
     }
 }
 @media (min-width: 600px) {
-    .portfolio-page {
-    padding-top: 150px;
-}
+     .portfolio-page {
+        padding-top: 150px; /* Adjust padding-top for medium screens */
+    }
+
     .photo-container img {
         max-width: 350px;
     }
+
     .photo-container img.large {
         max-width: 500px;
     }
+
     .photo-container img.small {
         max-width: 250px;
-    }
 }
 
 @media (min-width: 900px) {
