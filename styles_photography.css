@@ -200,20 +200,50 @@ main.hero p {
     }
 }
 @media (min-width: 600px) {
-     .portfolio-page {
-        padding-top: 200px; /* Adjust padding-top for medium screens */
+ .photo-container {
+        padding: 0 20px; /* Add padding to the container for smaller screens */
     }
 
     .photo-container img {
-        max-width: 350px;
+        max-width: 200px; /* Resize images for smaller screens */
     }
 
     .photo-container img.large {
-        max-width: 500px;
+        max-width: 300px;
     }
 
     .photo-container img.small {
-        max-width: 250px;
+        max-width: 150px;
+    }
+
+    .portfolio-page {
+        padding-top: 150px; /* Adjust padding-top for smaller screens */
+    }
+
+    header {
+        padding: 5px 10px; /* Reduce padding in the header */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduce font size of the header text */
+        margin-left: 10px; /* Reduce margin to fit smaller screens */
+    }
+
+    nav {
+        margin-top: 5px;
+        margin-left: 10px; /* Reduce margin to fit smaller screens */
+    }
+
+    nav ul {
+        gap: 5px; /* Reduce gap between nav items */
+    }
+
+    .social-media {
+        margin-right: 10px; /* Reduce margin to fit smaller screens */
+    }
+
+    .social-icon {
+        font-size: 16px; /* Reduce font size of social icons */
     }
 }
 @media (min-width: 900px) {
