@@ -125,7 +125,7 @@ main.hero p {
     gap: 30px;
     justify-items: center;
     width: 100%;
-    padding: 0 20px; /* Add padding to the container */
+    
 }
 
 .photo-container img {
@@ -151,7 +151,12 @@ main.hero p {
     max-width: 200px;
     height: auto;
 }
-
+/* Media query for small screens */
+@media (max-width: 599px) {
+    .photo-container {
+        padding: 0 20px; /* Add padding to the container for smaller screens */
+    }
+}
 @media (min-width: 600px) {
     .photo-container img {
         max-width: 400px;
