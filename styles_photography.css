@@ -125,7 +125,6 @@ main.hero p {
     gap: 30px;
     justify-items: center;
     width: 100%;
-    
 }
 
 .photo-container img {
@@ -151,6 +150,7 @@ main.hero p {
     max-width: 200px;
     height: auto;
 }
+
 /* Media query for small screens */
 @media (max-width: 599px) {
     .photo-container {
@@ -199,66 +199,42 @@ main.hero p {
         font-size: 16px; /* Reduce font size of social icons */
     }
 }
-@media (min-width: 600px) {
- .photo-container {
-        padding: 0 20px; /* Add padding to the container for smaller screens */
+
+/* Media query for medium screens */
+@media (min-width: 600px) and (max-width: 899px) {
+    .portfolio-page {
+        padding-top: 200px; /* Adjust padding-top for medium screens */
     }
 
     .photo-container img {
-        max-width: 200px; /* Resize images for smaller screens */
+        max-width: 350px;
     }
 
     .photo-container img.large {
-        max-width: 300px;
-    }
-
-    .photo-container img.small {
-        max-width: 150px;
-    }
-
-    .portfolio-page {
-        padding-top: 150px; /* Adjust padding-top for smaller screens */
-    }
-
-    header {
-        padding: 5px 10px; /* Reduce padding in the header */
-    }
-
-    h1 {
-        font-size: 1.5em; /* Reduce font size of the header text */
-        margin-left: 10px; /* Reduce margin to fit smaller screens */
-    }
-
-    nav {
-        margin-top: 5px;
-        margin-left: 10px; /* Reduce margin to fit smaller screens */
-    }
-
-    nav ul {
-        gap: 5px; /* Reduce gap between nav items */
-    }
-
-    .social-media {
-        margin-right: 10px; /* Reduce margin to fit smaller screens */
-    }
-
-    .social-icon {
-        font-size: 16px; /* Reduce font size of social icons */
-    }
-}
-@media (min-width: 900px) {
-    .photo-container img {
         max-width: 500px;
     }
-    .photo-container img.large {
-        max-width: 600px;
-    }
+
     .photo-container img.small {
-        max-width: 300px;
+        max-width: 250px;
     }
 }
 
 /* Media query for larger screens */
+@media (min-width: 900px) {
+    .photo-container img {
+        max-width: 500px;
+    }
+
+    .photo-container img.large {
+        max-width: 600px;
+    }
+
+    .photo-container img.small {
+        max-width: 300px;
+    }
+}
+
+/* Media query for extra-large screens */
 @media (min-width: 1200px) {
     .photo-container {
         grid-template-columns: repeat(5, 1fr);
@@ -313,6 +289,7 @@ main.hero p {
     background-color: #634832;
     color: #fff;
 }
+
 /* About section */
 .about-section {
     display: flex;
