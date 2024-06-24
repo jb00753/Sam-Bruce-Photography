@@ -155,7 +155,22 @@ main.hero p {
 @media (max-width: 599px) {
     .photo-container {
         padding: 0 20px; /* Add padding to the container for smaller screens */
-         max-width: 300px
+    }
+
+    .photo-container img {
+        max-width: 200px; /* Resize images for smaller screens */
+    }
+
+    .photo-container img.large {
+        max-width: 300px;
+    }
+
+    .photo-container img.small {
+        max-width: 150px;
+    }
+
+    .portfolio-page {
+        padding-top: 150px; /* Adjust padding-top for smaller screens */
     }
 }
 @media (min-width: 600px) {
