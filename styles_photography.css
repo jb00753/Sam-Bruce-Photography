@@ -159,8 +159,9 @@ main.hero p {
     }
 }
 @media (min-width: 600px) {
+    padding-top: 50px;
     .photo-container img {
-        max-width: 300px;
+        max-width: 350px;
     }
     .photo-container img.large {
         max-width: 500px;
